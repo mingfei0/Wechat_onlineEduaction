@@ -1,0 +1,78 @@
+<!-- index.wxml -->
+<!-- <view>
+  <searchbar></searchbar>
+</view> -->
+<swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorcolor}}" indicator-active-color="{{indicatoractivecolor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 首页课程跳转按钮 -->
+<view class="group">
+  <view class="groupitem">
+    <icon type="success" size="40" />
+    <text>小班课</text>
+  </view>
+  <view class="groupitem">
+    <icon type="info" size="40" />
+    <text>公开课</text>
+  </view>
+  <view class="groupitem">
+    <icon type="warn" size="40" />
+    <text>设计课</text>
+  </view>
+</view>
+<!-- 师资图表标题 -->
+<view>
+  <view class="title">
+    <text>——————</text>
+    <text>师资力量</text>
+    <text>——————</text>
+  </view>
+</view>
+<!-- 师资图表 -->
+
+<view class="weui-panel weui-panel_access">
+  <view class="weui-panel__bd">
+    <navigator url="../teacher/teacher" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{icon60}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">Wendy Teo</view>
+        <view class="weui-media-box__desc">UCL建筑PartII硕士</view>
+        <view class="weui-media-box__desc">U福斯特建筑事务所</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+
+<view class="weui-panel weui-panel_access">
+  <view class="weui-panel__bd">
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{icon60}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">Wendy Teo</view>
+        <view class="weui-media-box__desc">UCL建筑PartII硕士</view>
+        <view class="weui-media-box__desc">U福斯特建筑事务所</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+<!-- 师资图表 -->
+<!-- <view class="teacList">
+  <icon type="success" size="50" />
+  <view>
+    <text class="name">Wendy Teo\n</text>
+    <text class="resume">UCL建筑PartII硕士\n</text>
+    <text class="resume">伦敦福斯特建筑事务所</text>
+  </view>
+  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  <image src="./1.jpg" class="listImg" />
+</view> -->

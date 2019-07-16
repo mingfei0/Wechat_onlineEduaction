@@ -1,0 +1,63 @@
+<!-- pages/teacher/teacher.wxml -->
+<view class="page">
+    <!-- 教师基本信息 -->
+    <view class="weui-panel__bd weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" style="border-radius: 50%" src="./3.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">Wendy Teo</view>
+            <view class="weui-media-box__desc">设计/文书</view>
+        </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">基本信息</view>
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">专业</view>
+                <view class="weui-media-box__desc">建筑/城市设计</view>
+                <view class="weui-media-box__title weui-media-box__title_in-text">攻读院校方向</view>
+                <view class="weui-media-box__desc">英国</view>
+                <!-- 个人简历包含个人荣誉 -->
+                <view class="weui-media-box__title weui-media-box__title_in-text">个人简历</view>
+                <view class="weui-media-box__desc">
+                    毕业生个人简历制作时一定要尽情地表现你自己，而不是别人。在你的个人简历中展现你的技能，并用你自己取得的成果证明它们。如果你写作表达能力差，最好请写作能力比较强的人帮忙，你可以通过自己口述的方式让别人边听边写，用合适的词来描述你自己。另外写简历不必拘泥于格式：简历是你自己的简历，所以不管你写什么，只要看着合情合理就行。简历最好就是实话实说的表现自己，过高的虚夸或者是过于谦虚都不好。
+                </view>
+                <view class="weui-media-box__title weui-media-box__title_in-text">教育背景</view>
+                <view class="weui-media-box__desc2">Cambridge University</view>
+                <view class="weui-media-box__desc">
+                    Professional Sudies of Architectural Practice
+                </view>
+                <view class="weui-media-box__title weui-media-box__title_in-text">工作经历</view>
+                <view class="weui-media-box__desc2">婆罗洲艺术实验室 Borneo Laboratory 创始人</view>
+                <view class="weui-media-box__desc">2016.04 | 马来西亚</view>
+                <view class="weui-media-box__desc2">婆罗洲艺术实验室 Borneo Laboratory 创始人</view>
+                <view class="weui-media-box__desc">2016.04 | 马来西亚</view>
+                <button class="btn" type="default">
+                    <text class="btn-font">查看老师作品</text>
+                </button>
+            </view>
+        </view>
+    </view>
+
+<!-- Ta的课程 -->
+    <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">Ta的课程</view>
+        <view class="weui-panel__bd">
+            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="./3.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">文书攻略</view>
+                    <view class="weui-media-box__desc2">小组课|待发布</view>
+                    <rate id="w" count="5" value="5" disabled="enable" />
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+    </view>
+
+<!-- 评分系统 -->
+
+</view>

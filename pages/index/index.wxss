@@ -1,0 +1,63 @@
+/**index.wxss**/
+image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.groupitem {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  text-align: center;
+}
+
+.title {
+  font-size:35rpx;
+  margin-top: 60rpx;
+  text-align: center;
+  color:#d0d0d0; 
+  font-family: "PingFangSC-Thin";
+}
+
+.teacList{
+  display: flex;
+  flex-direction: row;
+  line-height:30rpx;
+  width: 85%;
+  margin-top: 25rpx;
+  border-radius: 10rpx;
+  font-family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+  box-shadow:3rpx 3rpx 10rpx 0rpx #C3C3C3 ;
+  padding-top: 10rpx;
+  padding-left: 5%;
+  margin-left: 5%;
+}
+
+.name{
+  margin-left:10rpx;
+  font-weight:bold;
+  font-size: 26rpx;
+}
+
+.resume{
+  margin-left:10rpx;
+  margin-top:15rpx; 
+  font-size: 23rpx;
+  color: #7F7F7F;
+}
+
+.right{
+  width: 10%;
+  justify-content: right;
+}

@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents":{
+      "i-icon": "../../components/icon/index",
+      "i-count-down": "../../components/count-down/index"
+  }
+  
+
+
+}

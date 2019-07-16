@@ -1,0 +1,38 @@
+<!-- class.wxml -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}rpx; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view style="width:95%">
+                        <navigator url="../classInfo/classInfo">
+                            <image src="./1.png" style="width:100%;height:300rpx" />
+                        </navigator>
+                        <view style="width:95%;padding:5rpx;">
+                            <view class="head">
+                                <text class="title">如何与大佬谈笑风生</text>
+                                <text class="class_state">报名中...</text>
+                            </view>
+                            <text class="time">开课时间:07月07日21:00-23:00</text>
+                            <view class="head">
+                                <image class="portrait-img" src="./1.jpg" alt="" />
+                                <image class="portrait-img" src="./add.jpg" alt="" />
+                                <text class="people">5人拼课开班</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项二的内容</view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,166 @@
+<!-- pages/classInfo/classInfo.wxml -->
+<!-- pages/teacher/teacher.wxml -->
+<view class="page">
+    <!-- 课程图片与截止日期 -->
+    <view class="header">
+        <image src="./1.png" class="image" />
+        <view class="notice">
+            <i-icon type="clock" size="20" color="#FFFFFF" class="icon"></i-icon>
+            <text class="endtime">报名截止时间：07月14日 12:00</text>
+            <!-- <view class="people">
+                <text>报名人数</text>
+                <text>3/16 人</text>
+            </view> -->
+        </view>
+    </view>
+    <!-- 课程基本信息 -->
+    <view>
+        <view class="title ">
+            <text class="title-main">如何与大佬谈笑风生</text>
+            <text class="title-other">课程评分5.00分 | 19人已参与课程</text>
+        </view>
+        <view class="detail">
+            <text class="detail-time">上课时间</text>
+            <view class="detail-time-main">
+                <view class="title-other">
+                    <text>2019年07月14日 16:00-22:00</text>
+                    <text class="place">本地时间</text>
+                </view>
+                <view class="title-other">
+                    <text>2019年07月14日 16:00-22:00</text>
+                    <text class="place">北京时间</text>
+                </view>
+            </view>
+        </view>
+        <view class="detail">
+            <text class="detail-time">时长</text>
+            <view class="detail-time-main">
+                <text class="title-other">360分钟</text>
+            </view>
+        </view>
+        <view class="detail">
+            <text class="detail-time">难度</text>
+            <view class="detail-time-main">
+                <text class="title-other">高级</text>
+            </view>
+        </view>
+    </view>
+    <!-- 拼课界面 -->
+    <view class="pinke">
+        <text class="pinke-title">当前 1 人在拼课，可以直接参与</text>
+        <view class="pinke-row" style="height:100rpx;">
+            <view>
+                <image class="portrait-img" src="./1.jpg" />
+                <image class="portrait-img" src="./add.jpg" />
+            </view>
+            <view class="pinke-row">
+                <view class="pinke-column" style="margin-right:20rpx;">
+                    <text class="pinke-font">还需4人拼课成功</text>
+                    <view class="pinke-row" style="width:100%">
+                        <text class="pinke-font">剩余 00:00:00</text>
+                        <!-- <i-count-down target="{{targetTime2}}" bindcallback="myLinsterner" clear-timer="{{clearTimer}}" class="pinke-font" style="display:float-left;"></i-count-down> -->
+                    </view>
+                </view>
+                <button class="weui-btn mini-btn" style="margin:0;margin-right:20rpx;" type="warn" size="mini" bindtap="openConfirm">
+                    参与拼课
+                </button>
+            </view>
+        </view>
+    </view>
+    <!-- 详细的课程信息 -->
+    <view class="weui-panel weui-panel_access" style="margin-top:0">
+        <view class="weui-panel__bd">
+            <!-- 课程信息 -->
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">课程信息</view>
+                <view class="weui-media-box__desc">
+                    当两位大佬在谈论你不知道却听起来很牛B的事而你只能在一旁默默微笑，不如现在就加入此课程，从此与大佬谈笑风生。
+                </view>
+            </view>
+            <!-- 指导老师 -->
+            <view class="weui-panel weui-panel_access">
+                <view class="weui-panel__bd weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text" style="border:0;">
+                        指导老师
+                    </view>
+                    <navigator url="../teacher/teacher" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                        <view class=" weui-media-box__hd_in-appmsg">
+                            <image class="weui-media-box__thumb" src="./1.jpg" />
+                        </view>
+                        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                            <view class="weui-media-box__title">Wendy Teo</view>
+                            <view class="weui-media-box__desc">UCL建筑PartII硕士</view>
+                            <view class="weui-media-box__desc">U福斯特建筑事务所</view>
+                        </view>
+                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                    </navigator>
+                </view>
+            </view>
+            <!-- 课程目标 -->
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">课程目标</view>
+                <view class="weui-media-box__desc">真正学会如何与大佬交谈</view>
+            </view>
+            <!-- 专业方向 -->
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">专业方向</view>
+                <view class="mid-font">
+                    授课方向
+                    <view class="weui-media-box__desc slot">社交技能</view>
+                </view>
+                <view class="mid-font">
+                    适用专业
+                    <view class="weui-media-box__desc slot">所有专业</view>
+                </view>
+                <view class="mid-font">
+                    涉及软件
+                    <view class="weui-media-box__desc slot">所有软件</view>
+                </view>
+            </view>
+            <!-- 课前要求 -->
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">课前要求</view>
+                <view class="weui-media-box__desc">什么都不会也可以</view>
+                <view class="weui-media-box__desc">什么都不会也可以</view>
+                <view class="weui-media-box__desc">什么都不会也可以</view>
+            </view>
+            <!-- 课程内容 -->
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">课程内容</view>
+                <view class="mid-font">第一节课</view>
+                <view class="weui-media-box__desc">学会观察大佬，大佬的一举一动都充满了暗示，本节课的宗旨就是了解人。</view>
+                <view class="weui-media-box__desc">-什么是人。我们从先秦诸子对人的探讨到古希腊哲学对人的剖析来了解人的精神奥秘与本质。</view>
+                <view class="weui-media-box__desc">
+                    -了解人的成长过程。虽然每个人的成长过程都不一样，但是每个阶段所面临的问题都大体相似，年少的孤独，青年的奋斗与爱情，更年期孩子的教育等等。当你旁敲侧击得出了大佬的过去，那么你离大佬的距离只差一个编好的故事。
+                </view>
+                <view class="weui-media-box__desc">
+                    上述两个点虽然看起来简单，我们每个人都经历过，但值得注意的事，一定要忘记上述两条准则去交流，切记切记。具体原因请购买课程，只要188买不了上当，买不了吃亏。
+                </view>
+                <view class="mid-font">第二节课</view>
+                <view class="weui-media-box__desc">学会说废话</view>
+                <view class="weui-media-box__desc">-上面这句话看起来是废话，的确也是废话，但如何让废话听起来不是废话，这是一门艺术。</view>
+                <view class="weui-media-box__desc">
+                    -本节课将引述古希腊的各种演讲家的经典片段与现代著名企业家的精彩演讲，来为大家展示什么是清洗脱俗的废话，什么是有思想的废话，什么是代表先进生产力的废话。
+                </view>
+                <view class="mid-font">第三节课</view>
+                <view class="weui-media-box__desc">实战训练</view>
+                <view class="weui-media-box__desc">-当你学习了上面两节课，请忘记上面两节课，这节课我们将带领你走入大佬的世界。</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='add_btn'>
+    <view class="btn_view">
+        <button class='btn_font'>
+            <i-icon type="remind" size="28" color="#80848f"></i-icon>
+            提醒开课
+        </button>
+    </view>
+    <view class="btn_view">
+        <button class='btn_font'>
+            <i-icon type="share" size="28" color="#80848f"></i-icon>
+            分享
+        </button>
+    </view>
+</view>
+

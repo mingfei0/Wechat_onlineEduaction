@@ -1,0 +1,3 @@
+<text class="countdown-class">
+  {{time}}
+</text>

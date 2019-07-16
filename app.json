@@ -1,0 +1,46 @@
+{
+  "component": true,
+  "usingComponents": {
+    "component-tag-name": "./components/searchbar/searchbar"
+  },
+  "pages": [
+    "pages/class/class",
+    "pages/index/index",
+    "pages/teacher/teacher",
+    "pages/classInfo/classInfo",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/classlist/classlist"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "拼客学堂",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon-mark@2x.png",
+        "selectedIconPath": "images/icon-mark-active@2x.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "课程中心",
+        "iconPath": "images/icon-shelf@2x.png",
+        "selectedIconPath": "images/icon-shelf-active@2x.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户中心",
+        "iconPath": "images/icon-smile@2x.png",
+        "selectedIconPath": "images/icon-smile-active@2x.png"
+      }
+    ]
+  }
+}
