@@ -10,7 +10,8 @@
     "pages/classInfo/classInfo",
     "pages/logs/logs",
     "pages/user/user",
-    "pages/classlist/classlist"
+    "pages/classlist/classlist",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "dark",

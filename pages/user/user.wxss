@@ -20,6 +20,11 @@
   height: 400rpx;
 }
 
+.login_btn{
+  background-color: #10AEFF;
+  color: #fff;
+}
+
 
 /* 我的拼课豆 */
 .list{
@@ -27,7 +32,6 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: b
 }
 
 .money{

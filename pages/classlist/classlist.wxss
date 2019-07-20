@@ -1,10 +1,95 @@
 /* pages/classlist/classlist.wxss */
-.headline{
+
+.headline {
     display: flex;
     font-size: 35rpx;
     text-align: center;
     border-bottom: 1rpx solid #d9d9d9;
     height: 100rpx;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
+}
+
+
+.title {
+    width: 100%;
+    font-size: 30rpx;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10rpx;
+}
+
+.head-people {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.class_state {
+    width: 100%;
+    font-size: 25rpx;
+    color: red;
+    text-align: right;
+}
+
+.time {
+    font-size: 20rpx;
+    color: #7F7F7F;
+    padding-left: 10rpx;
+}
+
+.people {
+    width: 100%;
+    font-size: 25rpx;
+    color: #00A2E8;
+    text-align: right;
+}
+
+.portrait-img {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+}
+
+.weui-tab__content {
+    display: flex;
+    justify-content: center;
+    padding-top: 10rpx;
+    width: 100%;
+    height: 100%;
+    line-height: 35rpx;
+}
+
+.btn {
+    border: 0rpx;
+    background-color: #ffff;
+    margin: 0;
+    font-size: 25rpx;
+    color: #e64340;
+    border-radius: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+.weui-tab__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    line-height: 35rpx;
+    background-color: #F7F8FA;
+}
+
+.main {
+    width: 95%;
+    padding-top: 20rpx;
+    border: 0rpx solid #000;
+    border-radius: 10rpx;
+    box-shadow: 10rpx 10rpx 10rpx #E7E8EA;
+    margin-bottom: 10px;
 }

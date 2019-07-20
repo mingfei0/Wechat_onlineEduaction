@@ -27,4 +27,9 @@ Page({
       activeIndex: e.currentTarget.id
     });
   },
+  gosearch: function () {
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
 })

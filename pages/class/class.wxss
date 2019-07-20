@@ -49,6 +49,7 @@
     white-space: nowrap;
     word-wrap: normal
 }
+
 .page__bd {
     height: 100%;
 }
@@ -59,15 +60,26 @@
 
 .weui-tab__content {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-top: 10rpx;
     width: 100%;
-    height: 100%;
     line-height: 35rpx;
+    background-color: #F7F8FA;
+}
+
+.main {
+    width: 95%;
+    padding-top: 20rpx;
+    border: 0rpx solid #000;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 10rpx 10rpx 10rpx #E7E8EA;
+    margin-bottom: 10px;
 }
 
 .title {
-    width:100%;
+    width: 100%;
     font-size: 30rpx;
 }
 
@@ -75,9 +87,8 @@
     display: flex;
     justify-content: right;
     align-items: right;
-    display: flex;
     flex-direction: row;
-    padding-left:10rpx;
+    padding-left: 10rpx;
 }
 
 .class_state {
@@ -90,10 +101,10 @@
 .time {
     font-size: 20rpx;
     color: #7F7F7F;
-    padding-left:10rpx;
+    padding-left: 10rpx;
 }
 
-.people{
+.people {
     width: 100%;
     font-size: 25rpx;
     color: #00A2E8;
@@ -106,3 +117,9 @@
     border-radius: 50%;
 }
 
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

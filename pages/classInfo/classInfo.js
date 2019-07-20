@@ -34,7 +34,7 @@ Page({
   openConfirm: function () {
     wx.showModal({
       title: '拼课提示',
-      content: '参与此次拼课最少需要188',
+      content: '参与此次拼课最少需要188 '+' '+' 若拼团失败会在截止时自动退回',
       confirmText: "确认支付",
       cancelText: "取消",
       success: function (res) {
@@ -51,6 +51,7 @@ Page({
       }
     });
   },
+
 
   /**
    * 生命周期函数--监听页面加载

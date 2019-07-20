@@ -967,11 +967,10 @@ icon {
     color: #999;
     font-size: 13px;
     line-height: 1.2;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2
 }
 
 .weui-media-box__info {

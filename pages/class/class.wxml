@@ -1,5 +1,15 @@
 <!-- class.wxml -->
-<view class="page">
+<view>
+    <view class="page__bd">
+        <view class="weui-search-bar" style="padding:4px 5px;">
+            <view class="weui-search-bar__form" style="border-radius: 15px;" bindtap="gosearch">
+                <view class="weui-search-bar__box center ">
+                    <icon type="search" size="14"></icon>
+                    <input style="width:40px;font-size:0.9rem" type="text" placeholder="搜索" disabled="true" />
+                </view>
+            </view>
+        </view>
+    </view>
     <view class="page__bd">
         <view class="weui-tab">
             <view class="weui-navbar">
@@ -12,7 +22,24 @@
             </view>
             <view class="weui-tab__panel">
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                    <view style="width:95%">
+                    <view class="main">
+                        <navigator url="../classInfo/classInfo">
+                            <image src="./1.png" style="width:100%;height:300rpx" />
+                        </navigator>
+                        <view style="width:95%;padding:5rpx;">
+                            <view class="head">
+                                <text class="title">如何与大佬谈笑风生</text>
+                                <text class="class_state">报名中...</text>
+                            </view>
+                            <text class="time">开课时间:07月07日21:00-23:00</text>
+                            <view class="head">
+                                <image class="portrait-img" src="./1.jpg" alt="" />
+                                <image class="portrait-img" src="./add.jpg" alt="" />
+                                <text class="people">5人拼课开班</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="main">
                         <navigator url="../classInfo/classInfo">
                             <image src="./1.png" style="width:100%;height:300rpx" />
                         </navigator>

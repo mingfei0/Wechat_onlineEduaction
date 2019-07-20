@@ -1,6 +1,6 @@
 /* pages/classInfo/classInfo.wxss */
-.page{
-    margin-bottom:70rpx;
+.page {
+    margin-bottom: 70rpx;
 }
 
 .header {
@@ -23,89 +23,108 @@
     align-items: center;
     font-size: 25rpx;
     color: #FFFFFF;
-    line-height:28rpx;
-    justify-content:space-between;
+    line-height: 28rpx;
+    justify-content: space-between;
 }
 
-.icon{
-    margin-left: 20rpx; 
+.icon {
+    margin-left: 20rpx;
 }
 
-.endtime{
+.endtime {
     width: 100%;
 }
 
-.people{
+.people {
     width: 25%;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
-.title{
-    margin-top: 35rpx;
-    margin-left:20rpx; 
+.container{
     display: flex;
-    flex-direction: column;
-    justify-content:center;
-    line-height:40rpx;
+    flex-direction: row;
 }
 
-.title-main{
+.pinke-price{
+    font-size: 30rpx;
+    color: #E64340;
+}
+
+.price{
+    text-align: right;
+    font-size: 25rpx;
+    color: #888888;
+    text-decoration:line-through;
+}
+
+.title {
+    margin-top: 35rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 40rpx;
+}
+
+.title-main {
     font-weight: 560;
     font-size: 35rpx;
 }
 
-.title-other{
+.title-other {
     display: flex;
     flex-direction: row;
     font-size: 26rpx;
     color: #484848;
 }
 
-.place{
+.place {
     padding-left: 20rpx;
 }
 
 
-.detail{
-    margin-left:20rpx;
-    margin-top:20rpx;
+.detail {
+    margin-left: 20rpx;
+    margin-top: 20rpx;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
-.detail-time{
+.detail-time {
     width: 30%;
     font-weight: 560;
     font-size: 35rpx;
 }
 
-.detail-time-main{
+.detail-time-main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
 }
 
-.pinke{
+.pinke {
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    margin-top:35rpx; 
-    border-top:1px solid #d9d9d9;
-    /* box-shadow: 10px 10px 5px #888888; */
+    justify-content: center;
+    margin-top: 35rpx;
+    margin-bottom: 20rpx;
+    border: 1px solid #d9d9d9;
+    background-color: #FFFFFF;
     padding-top: 5rpx;
-    padding-left:20rpx; 
+    padding-left: 20rpx;
+    border-radius: 10px;
 }
 
-.pinke-title{
+.pinke-title {
     width: 100%;
     font-size: 26rpx;
-    border-bottom:1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
 
 }
 
@@ -115,38 +134,47 @@
     border-radius: 50%;
 }
 
-.pinke-row{
+.pinke-row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:center;
-    justify-content:space-between;
+    justify-content: center;
+    justify-content: space-between;
 }
 
-.pinke-column{
+.pinke-column {
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 25rpx;
 }
 
-.pinke-font{
-    font-size:20rpx;
+.pinke-font {
+    font-size: 20rpx;
 }
 
-.mid-font{
+.mid-font {
     font-weight: 350;
     font-size: 14px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 10rpx;
+    margin-top: 10rpx;
 }
 
-.slot{
-    margin-left:50rpx;
+.weui-media-box__desc {
+    height: 100%;
+    margin-bottom: 5rpx;
+    overflow: inherit;
+    word-break: break-all;
 }
 
-.add_btn{
+.slot {
+    margin-left: 50rpx;
+}
+
+.add_btn {
     width: 100%;
     position: fixed;
     bottom: 0rpx;
@@ -154,11 +182,11 @@
     flex-direction: row;
 }
 
-.btn_view{
+.btn_view {
     width: 50%;
 }
 
-.btn_font{
+.btn_font {
     font-size: 30rpx;
 }
 
@@ -172,10 +200,11 @@
     top: 50%;
     left: 0;
     z-index: 9999;
-    background-color:#888888;
+    background-color: #888888;
     margin: -180rpx 150rpx;
     border-radius: 6rpx;
 }
+
 .modal-title {
     padding-left: 38rpx;
     padding-top: 24rpx;
@@ -183,7 +212,7 @@
     text-align: left;
 }
 
-.modal-content{
+.modal-content {
     padding-top: 30rpx;
     font-size: 30rpx;
     color: #ffffff;
@@ -198,6 +227,7 @@
     height: 86rpx;
     font-size: 34rpx;
 }
+
 .btn-confirm {
     margin-left: 50rpx;
     width: 150rpx;
@@ -210,6 +240,7 @@
     background-color: #09BB07;
     border-radius: 12rpx;
 }
+
 .btn-cancel {
     text-align: center;
     margin-left: 51rpx;
