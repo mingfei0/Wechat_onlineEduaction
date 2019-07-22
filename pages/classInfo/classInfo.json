@@ -2,7 +2,8 @@
   "component": true,
   "usingComponents":{
       "i-icon": "../../components/icon/index",
-      "i-count-down": "../../components/count-down/index"
+      "i-count-down": "../../components/count-down/index",
+      "i-pinke": "../../components/pinkeClass/pinke"
   }
   
 

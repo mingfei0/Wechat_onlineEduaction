@@ -1,35 +1,44 @@
 // pages/classInfo/classInfo.js
+
+var Bmob = require('../../dist/Bmob-1.7.1.min.js');
+
 Page({
   data: {
-    //拼课弹窗
+    //跳转携带的课程链接ID
+    relevantClassId:"",
+    //保存拼课表的链接ID
+    relevantPinkeId:"",
+    //保存教师的链接ID
+    relevantTeacherId:"",
+    //课程总体信息
+    classInfo:"",
     showModal: false,
-    // 计时器
-    targetTime: 0,
-    targetTime1: 0,
-    myFormat: ['时', '分', '秒'],
-    myFormat1: ['天', '时', '分', '秒'],
-    status: '进行中...',
-    clearTimer: false
   },
-  //计时器函数
-  onLoad() {
+  
+
+  onLoad(options) {
+    //将链接获取的课程ID保存
     this.setData({
-      targetTime: new Date().getTime() + 6430000,
-      targetTime1: new Date().getTime() + 86430000,
-      // targetTime2: new Date().getTime() + 10000
-    });
-    console.log(Date());
+      relevantClassId: options.relevantClassId
+    })
+
+    //链接课程详细数据表
+    var query = Bmob.Query('Class_list');
+    query.get(this.data.relevantClassId).then(res => {
+      
+      this.setData({
+        classInfo:res,
+        relevantPinkeId:res.relevantPinkeId,
+        relevantTeacherId:res.relevantTeacherId
+        
+      })
+      console.log(this.data.relevantPinkeId)
+    }).catch(err => {
+      console.log(err)
+    })
   },
-  onUnload() {
-    this.setData({
-      clearTimer: true
-    });
-  },
-  myLinsterner(e) {
-    this.setData({
-      status: '结束'
-    });
-  },
+
+
   //拼课弹窗函数
   openConfirm: function () {
     wx.showModal({
@@ -50,14 +59,6 @@ Page({
         }
       }
     });
-  },
-
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
   },
 
   /**

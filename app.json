@@ -5,9 +5,9 @@
   },
   "pages": [
     "pages/class/class",
+    "pages/classInfo/classInfo",
     "pages/index/index",
     "pages/teacher/teacher",
-    "pages/classInfo/classInfo",
     "pages/logs/logs",
     "pages/user/user",
     "pages/classlist/classlist",

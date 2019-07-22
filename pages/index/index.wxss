@@ -47,12 +47,11 @@
 
 .title {
   display: flex;
-  justify-content: space-around;
-  font-size: 35rpx;
-  margin-top: 60rpx;
-  text-align: center;
-  color: #d0d0d0;
-
+  flex-direction: row;
+  font-size:26rpx;
+  align-items: center;
+  justify-content: center;
+  color: #22A7FF;
 }
 
 .teacList {

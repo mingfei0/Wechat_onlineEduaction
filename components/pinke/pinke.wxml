@@ -1,0 +1,9 @@
+<!-- components/pinke/pinke.wxml -->
+<view class="head">
+    <block wx:for="{{image}}" wx:key="index">
+        <view class="image-container" style="">
+            <image class="portrait-img" src="{{image[index]}}" alt="" />
+        </view>
+    </block>
+    <text class="people">{{limitNumber}}人拼课开班</text>
+</view>

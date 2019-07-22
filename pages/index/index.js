@@ -1,69 +1,109 @@
 //index.js
-//获取应用实例
+//初始化后端接口实例
+
+var Bmob = require('../../dist/Bmob-1.7.1.min.js');
+var app = getApp();
+var number = 0;             //教师数据已获取数量
+var teacherNumber = 0;           //教师总数量
 Page({
+
   data: {
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
+    //轮播图信息
     indicatorDots: true,
     indicatorcolor: "#9BD7FF",
     indicatoractivecolor: "#CCEAFD",
     autoplay: true,
     interval: 5000,
     duration: 1000,
+    finalLine:false,
     iconType: [
       'success', 'success_no_circle', 'info'
     ],
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function () {
+    //获取首页轮播图,图片地址与对应的课程ID用于跳转
+    var query = Bmob.Query('Index_recommend');
+    
+    query.find().then(res => {
+      var result = res;
+
+      var url = new Array();
+      var classId = new Array();
+
+      for (let i = 0; i < result.length; i++) {
+        url[i] = result[i].url;
+        classId[i] = result[i].relevant_classId;
+      }
+      this.setData({
+        imgUrls: url,
+        classId: classId,
+      });
+    }).catch(err => {
+      console.log(err)
+    })
+
+    //获取教师的基本信息
+    query = Bmob.Query('Teacher_profiles');
+    query.limit(6);
+    number = number + 6;
+    var teacherlist = new Array();
+    
+    query.count().then(res => {
+      teacherNumber = res;
+    });
+
+    query.find().then(res => {
+      console.log(res);
+      teacherlist = res;
+      this.setData({
+        teacherlist: teacherlist,
+      });
+    }).catch(err => {
+      console.log(err)
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  //设置活动栏
+  toclass: function (e) {
+    let a = e.currentTarget.index;
+    app.activeIndex = a;
+    wx.switchTab({
+      url: '../class/class'
+    })
+  },
+
+  setActiveIndex: function (e) {
 
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    if(number <= teacherNumber){
+      var query = Bmob.Query('Teacher_profiles');
+    query.skip(number);
+    var teacherlist = new Array();
+    query.find().then(res => {
+      console.log(res);
+      number = number + res.length;
+      teacherlist = this.data.teacherlist.concat(res);
+      this.setData({
+        teacherlist: teacherlist,
+      });
+    }).catch(err => {
+      console.log(err)
+    })
+    }else{
+      this.setData({
+        finalLine: false,
+      });
+    }
+    
   },
 
   /**

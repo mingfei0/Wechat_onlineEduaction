@@ -70,10 +70,9 @@
 
 .main {
     width: 95%;
-    padding-top: 20rpx;
+    margin-top: 10px;
     border: 0rpx solid #000;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px;
     box-shadow: 10rpx 10rpx 10rpx #E7E8EA;
     margin-bottom: 10px;
 }
@@ -88,7 +87,7 @@
     justify-content: right;
     align-items: right;
     flex-direction: row;
-    padding-left: 10rpx;
+    padding-left: 15rpx;
 }
 
 .class_state {
@@ -101,25 +100,12 @@
 .time {
     font-size: 20rpx;
     color: #7F7F7F;
-    padding-left: 10rpx;
-}
-
-.people {
-    width: 100%;
-    font-size: 25rpx;
-    color: #00A2E8;
-    text-align: right;
-}
-
-.portrait-img {
-    width: 40rpx;
-    height: 40rpx;
-    border-radius: 50%;
+    padding-left: 15rpx;
 }
 
 .center{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
 }
