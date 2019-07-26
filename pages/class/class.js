@@ -10,8 +10,8 @@ Page({
    */
   data: {
     tabs: ["小班课", "公开课", "设计课"],
-    state:["报名中", "人数已满", "已结课"],
-    color:["red","yellow","#7F7F7F"],
+    state: ["报名中", "人数已满", "已结课"],
+    color: ["red", "yellow", "#7F7F7F"],
     activeIndex: app.activeIndex,
     sliderOffset: 0,
     sliderLeft: 30
@@ -28,12 +28,14 @@ Page({
       }
     });
   },
+  
   tabClick: function (e) {
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id
     });
   },
+
   gosearch: function () {
     wx.navigateTo({
       url: '../search/search',
@@ -51,6 +53,7 @@ Page({
     query.count().then(res => {
       teacherNumber = res;
     });
+    query.order("-score", "state");
 
     query.find().then(res => {
       this.setData({
@@ -80,10 +83,10 @@ Page({
       this.setData({
         finalLine: false,
       });
-    }    
+    }
   },
 
-  getPinkelist: function(relevantPinkeId){
+  getPinkelist: function (relevantPinkeId) {
     let query = Bmob.Query('Pinke_list');
     query.get(relevantPinkeId).then(res => {
       console.log(res);
@@ -91,6 +94,5 @@ Page({
       console.log(err)
     })
   },
-  
-})
 
+})

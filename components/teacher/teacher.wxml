@@ -1,2 +1,18 @@
-<!--components/teacher/teacher.wxml-->
-<text>components/teacher/teacher.wxml</text>
+<!-- components/teacher/teacher.wxml -->
+<view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text" style="border:0;">
+            指导老师
+        </view>
+        <navigator url="../teacher/teacher?relevantTeacherId={{relevantTeacherId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class=" weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="{{image}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">{{Name}}</view>
+                <text class="weui-media-box__desc">{{experience}}</text>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+</view>

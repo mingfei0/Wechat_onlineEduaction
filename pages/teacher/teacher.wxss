@@ -1,4 +1,14 @@
 /* pages/teacher/teacher.wxss */
+
+.page {
+    background-color: #ffffff;
+}
+
+.label{
+    font-size: 30rpx;
+    font-weight: 550;
+}
+
 .grade {
     width: 100rpx;
     height: 90rpx;
@@ -26,50 +36,66 @@
     line-height: 35rpx;
 }
 
-.weui-media-box__title {
-    font-weight: 400;
-    font-size: 30rpx;
-    width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
-    word-wrap: break-word;
-    word-break: break-all
+.title {
+    font-weight: 550;
+    font-size: 33rpx;
 }
 
-.weui-media-box__title_in-text {
-    margin-bottom: 1px
+.desc {
+    font-weight: 200;
+    font-size: 30rpx;
+    margin-top: 5px;
+    margin-bottom: 40px;
 }
+
+.resume {
+    font-weight: 200;
+    font-size: 30rpx;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    line-height: 1.5rem;
+}
+
+.education {
+    font-weight: 200;
+    font-size: 30rpx;
+    margin-top: 5px;
+    height:auto ;
+}
+
+.title-work{
+    margin-top: 40px;
+}
+
+.workExperience {
+    font-weight: 200;
+    font-size: 30rpx;
+}
+
+.workExperience-desc{
+    font-weight: 200;
+    font-size: 30rpx;
+    margin-top: 5px;
+    color: #999;
+}
+
+
+/* .weui-media-box__title_in-text {
+    margin-bottom: 1px
+}*/
 
 .weui-media-box__desc {
-    margin-bottom: 25rpx;
     width: 100%;
     color: #999;
     font-size: 13px;
     line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2
-}
+} 
 
-.weui-media-box__desc2 {
-    margin-bottom: 0rpx;
-    width: 100%;
-    color: #999;
-    font-size: 13px;
-    line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2
-}
 
 .btn {
-    border:1px solid #99D9EA;
+    width: 90%;
+    margin-bottom: 20px;
+    border: 1px solid #99D9EA;
     border-radius: 40rpx;
     background-color: #ffffff;
 }
@@ -77,4 +103,58 @@
 .btn-font {
     color: #99D9EA;
     font-size: 30rpx;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    padding: 14px 15px 10px;
+    flex-wrap: wrap;
+}
+
+.score{
+    color:#F5A623;
+    font-size: 2rem;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.detail{
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+
+.tag{
+    text-align: center;
+    width: 25%;
+    font-size: 0.9rem;
+    background-color: #E9E9E9;
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.image{
+    height: 70rpx;
+    width: 70rpx;
+    border-radius: 50%;
+}
+
+.class_type{
+    font-size: 0.80rem;
+    width: 100%;
+    color: rgb(196, 192, 192);
+}
+
+.comments{
+    font-size: 0.80rem;
+    padding-left: 5px;
 }

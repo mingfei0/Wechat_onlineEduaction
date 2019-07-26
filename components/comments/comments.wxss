@@ -1,0 +1,38 @@
+/* components/comments/comments.wxss */
+@import '../../style/weui.wxss';
+
+.image {
+    height: 70rpx;
+    width: 70rpx;
+    border-radius: 50%;
+}
+
+.class_type {
+    font-size: 0.80rem;
+    width: 100%;
+    color: rgb(196, 192, 192);
+}
+
+.comments {
+    font-size: 0.80rem;
+    padding-left: 5px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 14px 15px 10px;
+    flex-wrap: wrap;
+}
+
+.detail{
+    font-size: 0.85rem;
+    width: 100%;
+}

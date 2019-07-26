@@ -1,11 +1,11 @@
 <!-- class.wxml -->
 <view>
     <view class="page__bd">
-        <view class="weui-search-bar" style="padding:4px 5px;">
+        <view class="weui-search-bar" style="padding:4px 5px;height:40px;">
             <view class="weui-search-bar__form" style="border-radius: 15px;" bindtap="gosearch">
-                <view class="weui-search-bar__box center ">
-                    <icon type="search" size="14"></icon>
-                    <input style="width:40px;font-size:0.9rem" type="text" placeholder="搜索" disabled="true" />
+                <view class="weui-search-bar__box center" style="height:100%">
+                    <icon type="search" size="16"></icon>
+                    <input style="width:40px;font-size:1rem" type="text" placeholder="搜索" disabled="true" />
                 </view>
             </view>
         </view>
@@ -46,6 +46,7 @@
                                 <i-pinke relevantPinkeId = "{{item.relevantPinkeId}}"></i-pinke>
                             </view>
                         </view>
+
                     </navigator>
 
                 </view>

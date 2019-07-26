@@ -1,6 +1,8 @@
 {
   "component": true,
   "usingComponents":{
-      "rate": "../../components/rate/index"
+      "rate": "../../components/rate/index",
+      "i-class": "../../components/class/class",
+      "i-comments":"../../components/comments/comments"
   }
 }

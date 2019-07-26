@@ -18,9 +18,9 @@
         <view class="container ">
             <view class="title ">
                 <text class="title-main">{{classInfo.className}}</text>
-                <text class="title-other">
+                <view class="title-other">
                     课程评分{{classInfo.rate}}分 | {{classInfo.completedPersons}}人已参与课程
-                </text>
+                </view>
             </view>
             <view class="title " style="margin-left:20%">
                 <text class="pinke-price">拼课价:{{classInfo.pinkePrice}}</text>
@@ -53,19 +53,15 @@
             </view>
         </view>
     </view>
-    
     <!-- 拼课界面 -->
-    <i-pinke relevantPinkeId="{{classInfo.relevantPinkeId}}"></i-pinke>
-
+    <i-pinke relevantPinkeId="{{relevantPinkeId}}"></i-pinke>
     <!-- 详细的课程信息 -->
     <view class="weui-panel weui-panel_access" style="margin-top:0">
         <view class="weui-panel__bd">
             <!-- 课程信息 -->
             <view class="weui-media-box weui-media-box_text">
                 <view class="weui-media-box__title weui-media-box__title_in-text">课程信息</view>
-                <view class="weui-media-box__desc">
-                    {{classInfo.classInfo}}
-                </view>
+                <view class="weui-media-box__desc">{{classInfo.classInfo}}</view>
             </view>
             <!-- 指导老师 -->
 
@@ -74,50 +70,49 @@
                     <view class="weui-media-box__title weui-media-box__title_in-text" style="border:0;">
                         指导老师
                     </view>
-                    <navigator url="../teacher/teacher" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <navigator url="../teacher/teacher?relevantTeacherId={{relevantTeacherId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                         <view class=" weui-media-box__hd_in-appmsg">
-                            <image class="weui-media-box__thumb" src="./1.jpg" />
+                            <image class="weui-media-box__thumb" src="{{teacherImage}}" />
                         </view>
                         <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                            <view class="weui-media-box__title">Wendy Teo</view>
-                            <view class="weui-media-box__desc">UCL建筑PartII硕士</view>
-                            <view class="weui-media-box__desc">U福斯特建筑事务所</view>
+                            <view class="weui-media-box__title">{{teacherName}}</view>
+                            <text class="weui-media-box__desc">{{experience}}</text>
                         </view>
                         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                     </navigator>
                 </view>
             </view>
-            
+
             <!-- 课程目标 -->
             <view class="weui-media-box weui-media-box_text">
                 <view class="weui-media-box__title weui-media-box__title_in-text">课程目标</view>
-                <view class="weui-media-box__desc">真正学会如何与大佬交谈</view>
+                <view class="weui-media-box__desc">{{classInfo.target}}</view>
             </view>
             <!-- 专业方向 -->
             <view class="weui-media-box weui-media-box_text">
                 <view class="weui-media-box__title weui-media-box__title_in-text">专业方向</view>
                 <view class="mid-font">
                     授课方向
-                    <view class="weui-media-box__desc slot">社交技能</view>
+                    <view class="weui-media-box__desc slot">{{classInfo.direction}}</view>
                 </view>
                 <view class="mid-font">
                     适用专业
-                    <view class="weui-media-box__desc slot">所有专业</view>
+                    <view class="weui-media-box__desc slot">{{classInfo.marjor}}</view>
                 </view>
                 <view class="mid-font">
                     涉及软件
-                    <view class="weui-media-box__desc slot">所有软件</view>
+                    <view class="weui-media-box__desc slot">{{classInfo.software}}</view>
                 </view>
             </view>
             <!-- 课前要求 -->
             <view class="weui-media-box weui-media-box_text">
                 <view class="weui-media-box__title weui-media-box__title_in-text">课前要求</view>
-                <text class="weui-media-box__desc">{{text}}</text>
+                <text class="weui-media-box__desc">{{classInfo.requirement}}</text>
             </view>
             <!-- 课程内容 -->
             <view class="weui-media-box weui-media-box_text">
                 <view class="weui-media-box__title weui-media-box__title_in-text">课程内容</view>
-                <view style="line-height:30rpx;">
+                <!-- <view  style="line-height:30rpx;">
                     <view class="mid-font">第一节课</view>
                     <view class="weui-media-box__desc ">学会观察大佬，大佬的一举一动都充满了暗示，本节课的宗旨就是了解人。</view>
                     <view class="weui-media-box__desc">
@@ -142,6 +137,25 @@
                     <view class="weui-media-box__desc">
                         - 当你学习了上面两节课，请忘记上面两节课，这节课我们将带领你走入大佬的世界。
                     </view>
+                </view> -->
+                <view wx:key="index" style="line-height:30rpx;">
+                    <block wx:for="{{classInfo.content}}" wx:key="index">
+                        <view class="weui-media-box__desc">{{classInfo.content[index]}}</view>
+                    </block>
+                    <!-- <view class="mid-font">第二节课</view>
+                    <view class="weui-media-box__desc">学会说废话</view>
+                    <view class="weui-media-box__desc">
+                        - 上面这句话看起来是废话，的确也是废话，但如何让废话听起来不是废话，这是一门艺术。
+                    </view>
+                    "content": ["学会观察大佬，大佬的一举一动都充满了暗示，本节课的宗旨就是了解人。\n- 什么是人。我们从先秦诸子对人的探讨到古希腊哲学对人的剖析来了解人的精神奥秘与本质。\n-了解人的成长过程。虽然每个人的成长过程都不一样，但是每个阶段所面临的问题都大体相似，年少的孤独，青年的奋斗与爱情，更年期孩子的教育等等。当你旁敲侧击得出了大佬的过去，那么你离大佬的距离只差一个编好的故事。\n上述两个点虽然看起来简单，我们每个人都经历过，但值得注意的事，一定要忘记上述两条准则去交流，切记切记。具体原因请购买课程，只要188买不了上当，买不了吃亏。","学会说废话\n- 上面这句话看起来是废话，的确也是废话，但如何让废话听起来不是废话，这是一门艺术。\n- 本节课将引述古希腊的各种演讲家的经典片段与现代著名企业家的精彩演讲，来为大家展示什么是清洗脱俗的废话，什么是有思想的废话，什么是代表先进生产力的废话。","实战训练\n- 当你学习了上面两节课，请忘记上面两节课，这节课我们将带领你走入大佬的世界。"]
+                    <view class="weui-media-box__desc">
+                        - 本节课将引述古希腊的各种演讲家的经典片段与现代著名企业家的精彩演讲，来为大家展示什么是清洗脱俗的废话，什么是有思想的废话，什么是代表先进生产力的废话。
+                    </view>
+                    <view class="mid-font">第三节课</view>
+                    <view class="weui-media-box__desc">实战训练</view>
+                    <view class="weui-media-box__desc">
+                        - 当你学习了上面两节课，请忘记上面两节课，这节课我们将带领你走入大佬的世界。
+                    </view> -->
                 </view>
             </view>
         </view>

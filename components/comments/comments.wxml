@@ -1,0 +1,13 @@
+<!-- components/comments/comments.wxml -->
+<block wx:for="{{student}}" wx:key="index">
+    <view class="weui-panel__bd row">
+        <image class="image" src="{{image[index]}}" />
+        <view class="column" style="width:80%">
+            <view style="padding-left:5px">
+                <view class="detail">{{student[index]}}</view>
+                <view class="class_type">{{type[index]}}</view>
+            </view>
+            <view class="comments" style="width:100%">{{comments[index]}}</view>
+        </view>
+    </view>
+</block>

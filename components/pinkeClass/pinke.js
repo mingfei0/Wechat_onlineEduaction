@@ -23,10 +23,8 @@ Component({
 
   ready() {
     var query = Bmob.Query('Pinke_list');
-
     query.get(this.data.relevantPinkeId).then(res => {
-      let info = res;
-      console.log(info.results[0].userImage);
+      console.log(this.data.relevantPinkeId);
       this.setData({
         image : res.results[0].userImage,
         remNumber : res.results[0].limitNumber-res.results[0].curNumber

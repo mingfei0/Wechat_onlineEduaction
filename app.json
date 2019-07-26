@@ -4,9 +4,9 @@
     "component-tag-name": "./components/searchbar/searchbar"
   },
   "pages": [
+    "pages/index/index",
     "pages/class/class",
     "pages/classInfo/classInfo",
-    "pages/index/index",
     "pages/teacher/teacher",
     "pages/logs/logs",
     "pages/user/user",
