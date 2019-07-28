@@ -1,0 +1,91 @@
+<!-- class.wxml -->
+<view>
+    <view class="page__bd">
+        <view class="weui-search-bar" style="padding:4px 5px;height:40px;">
+            <view class="weui-search-bar__form" style="border-radius: 15px;" bindtap="gosearch">
+                <view class="weui-search-bar__box center" style="height:100%">
+                    <icon type="search" size="16"></icon>
+                    <input style="width:40px;font-size:1rem" type="text" placeholder="搜索" disabled="true" />
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}rpx; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <navigator url="../classInfo/classInfo?relevantClassId={{item.relevantClassId}}" wx:for="{{classlist}}" wx:key="objectId" class="main">
+                        <view>
+                            <image src="{{item.classImage}}" style="width:100%;height:300rpx;border-top-right-radius: 10px;border-top-left-radius: 10px;" />
+                        </view>
+                        <view style="width:95%;margin-top:5px;">
+                            <view class="head">
+                                <view class="title">{{item.Name}}</view>
+                                <block wx:if="{{item.state==0}}">
+                                    <view class="class_state" style="color:#1BAA45">
+                                        {{state[0]}}...
+                                    </view>
+                                </block>
+                                <block wx:if="{{item.state==1}}">
+                                    <view class="class_state" style="color:#D9674A">
+                                        {{state[1]}}
+                                    </view>
+                                </block>
+                                <block wx:if="{{item.state==2}}">
+                                    <view class="class_state" style="color:#7F7F7F">
+                                        {{state[2]}}
+                                    </view>
+                                </block>
+                            </view>
+                            <text class="time">报名截止时间:{{item.endTime}}</text>
+                            <view style="margin-bottom:5px;margin-top:5px;margin-left:10rpx;">
+                                <i-pinke relevantPinkeId="{{item.relevantPinkeId}}"></i-pinke>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+
+                    <!-- 还未完成数据链接工作 -->
+                    <navigator url="../classInfo/classInfo?relevantClassId={{item.relevantClassId}}" wx:for="{{classlist}}" wx:key="objectId" class="main">
+                        <view>
+                            <image src="{{item.classImage}}" style="width:100%;height:300rpx;border-top-right-radius: 10px;border-top-left-radius: 10px;" />
+                        </view>
+                        <view style="width:95%;margin-top:5px;">
+                            <view class="head">
+                                <view class="title">{{item.Name}}</view>
+                                <block wx:if="{{item.state==0}}">
+                                    <view class="class_state" style="color:#1BAA45">
+                                        {{state3[0]}}...
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <view class="class_state" style="color:#7F7F7F">
+                                        {{state3[1]}}
+                                    </view>
+                                </block>
+                            </view>
+                            <text class="time">报名截止时间:{{item.endTime}}</text>
+                            <view style="margin-bottom:5px;margin-top:5px;margin-left:10rpx;">
+                                <i-pinke-com relevantPinkeId="{{item.relevantPinkeId}}"></i-pinke-com>
+                            </view>
+                        </view>
+                    </navigator>
+
+                </view>
+
+
+            </view>
+        </view>
+    </view>
+</view>

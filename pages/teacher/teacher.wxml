@@ -1,0 +1,77 @@
+<!-- pages/teacher/teacher.wxml -->
+<view class="page">
+    <!-- 教师基本信息 -->
+    <view class="weui-panel__bd weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" style="border-radius: 50%;height:" src="{{image}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title" style="font-size:38rpx;margin-bottom:5px;">
+                {{Name}}
+            </view>
+            <view class="weui-media-box__desc" style="font-size:30rpx;">{{type}}</view>
+        </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd label">基本信息</view>
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+                <view class="title">专业</view>
+                <view class="desc">{{major}}</view>
+                <view class="title">攻读院校方向</view>
+                <view class="desc">{{country}}</view>
+                <!-- 个人简历包含个人荣誉 -->
+                <view class="title">个人简历</view>
+                <view class="resume">{{resume}}</view>
+                <view class="title">教育背景</view>
+                <!-- <block wx:for="{{education}}" wx:key="index">
+                    <view class="workExperience">{{education[index]}}</view>
+                </block> -->
+                <text class="education">{{education}}</text>
+                <view class="title title-work">工作经历</view>
+                <block wx:for="{{workExperience}}" wx:key="index">
+                    <view wx:if="{{index%2==0}}" class="workExperience">
+                        {{workExperience[index]}}
+                    </view>
+                    <view wx:if="{{index%2==1}}" class="workExperience-desc">
+                        {{workExperience[index]}}
+                    </view>
+                </block>
+            </view>
+            <button class="btn" type="default">
+                <text class="btn-font">查看老师作品</text>
+            </button>
+        </view>
+    </view>
+    <!-- Ta的课程 -->
+    <view class="weui-panel" style="margin-top:0;border:0">
+        <view class="weui-panel__hd label">Ta的课程</view>
+        <block wx:for="{{relevantClassId}}" wx:key="index">
+            <i-class relevantId="{{relevantClassId[index]}}"></i-class>
+        </block>
+    </view>
+    <!-- 评分系统 -->
+    <view class="weui-panel" style="margin-top:0">
+        <view class="row" style="padding-bottom:0">
+            <view class="score">{{rate}}</view>
+            <view class="column">
+                <view>
+                    <view class="detail">教师评分（{{scorers}}次）</view>
+                </view>
+                <view style="margin-top:-10px;">
+                    <rate id="w" count="5" value="{{rate}}" disabled="enable" />
+                </view>
+            </view>
+        </view>
+        <view class="row" style="padding-top:0;padding-bottom:14px;">
+            <block wx:for="{{characteristics}}" wx:key="index">
+                <text class="tag">{{characteristics[index]}}</text>
+            </block>
+        </view>
+    </view>
+    <!-- 学生评价 -->
+    <view class="weui-panel" style="margin-top:0">
+        <view class="weui-panel__hd label">学生评价</view>
+        <i-comments studentEvaluation="{{studentEvaluation}}"></i-comments>
+    </view>
+</view>

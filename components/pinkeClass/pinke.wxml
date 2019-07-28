@@ -1,0 +1,31 @@
+<!-- components/pinke/pinke.wxml -->
+<!-- <view class="head">
+    <block wx:for="{{image}}" wx:key="index">
+        <view class="image-container" style="">
+            <image class="portrait-img" src="{{image[index]}}" alt="" />
+        </view>
+    </block>
+    <text class="people">{{limitNumber}}人拼课开班</text>
+</view> -->
+<view class="pinke">
+    <view class="pinke-row" style="height:100rpx;">
+        <view class="center">
+            <block wx:for="{{image}}" wx:key="index">
+                <view class="image-container" style="">
+                    <image class="portrait-img" src="{{image[index]}}" alt="" />
+                </view>
+            </block>
+        </view>
+        <view class="pinke-row">
+            <view class="pinke-column" style="margin-right:20rpx;">
+                <text class="pinke-font">还需{{remNumber}}人拼课成功</text>
+                <view class="pinke-row" style="width:100%">
+                    <text class="pinke-font">剩余 00:00:00</text>
+                </view>
+            </view>
+            <button class="weui-btn mini-btn" style="margin:0;margin-right:20rpx;" type="warn" size="mini" bindtap="openConfirm">
+                参与拼课
+            </button>
+        </view>
+    </view>
+</view>

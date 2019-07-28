@@ -1,0 +1,27 @@
+<!-- pages/classlist/classlist.wxml -->
+<!-- 标题 -->
+<view class="headline">
+    <text>我的课程</text>
+</view>
+<view>
+    <view class="weui-tab__content">
+        <view class="main">
+            <navigator url="../classInfo/classInfo">
+                <image src="./1.png" style="width:100%;height:300rpx" />
+            </navigator>
+            <view style="width:95%;padding:5rpx;">
+                <view class="head">
+                    <text class="title">如何与大佬谈笑风生</text>
+                </view>
+                <text class="time">开课时间:07月07日21:00-23:00</text>
+                <view class="head">
+                    <view class="head-people">
+                        <image class="portrait-img" src="./1.jpg" alt="" />
+                        <text class="people">剩余4人拼课完成</text>
+                    </view>
+                    <button class="btn">申请退课</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

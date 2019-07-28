@@ -1,0 +1,9 @@
+/* components/teacher/teacher.wxss */
+@import '../../style/weui.wxss';
+
+.weui-media-box__desc {
+    height: 100%;
+    margin-bottom: 5rpx;
+    overflow: inherit;
+    word-break: break-all;
+}

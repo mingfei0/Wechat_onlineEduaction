@@ -1,0 +1,29 @@
+<!-- user.wxml -->
+<view>
+  <view class="userinfo main">
+   <button wx:if="{{canIUse}}" class="login_btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    <view wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <!-- 我的拼课豆 -->
+  <view class="list" >
+      <text class="money">我的拼课豆: 0</text>
+      <button class="btn"> 充值</button>
+  </view>
+  <!-- 查看我的课程 -->
+  <view class="weui-cells weui-cells_after-title" style="width:100%;margin-top:40rpx;">
+    <navigator url="../classlist/classlist" class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">我的课程</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0"></view>
+    </navigator>
+  </view>
+  <!-- 底部footer -->
+  <view class="weui-footer " style="margin-bottom:40rpx">
+    <view class="weui-footer__links">
+      <view class="weui-footer__link">客服电话微信:13554623589</view>
+    </view>
+  </view>
+</view>
+

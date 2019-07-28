@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-pinke": "../../components/pinke/pinke",
+    "i-pinke-com": "../../components/pinke-com/pinke"
+  }
+}

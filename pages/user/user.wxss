@@ -1,0 +1,79 @@
+/* user.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400rpx;
+}
+
+.login_btn{
+  background-color: #10AEFF;
+  color: #fff;
+}
+
+
+/* 我的拼课豆 */
+.list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.money{
+  margin-left:30rpx; 
+}
+
+.btn{
+  border: 0rpx;
+  background-color: #ffff;
+  position:static;
+  margin: 0;
+  font-size: 30rpx;
+  width: 30%;
+  color: #09BB07;
+}
+
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.weui-footer {
+  position: fixed;
+}
+
+.weui-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0rpx;
+}

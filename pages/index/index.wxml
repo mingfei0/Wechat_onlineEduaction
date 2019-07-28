@@ -1,0 +1,44 @@
+<!-- index.wxml -->
+<swiper style="height:200px" indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorcolor}}" indicator-active-color="{{indicatoractivecolor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <navigator url="../classInfo/classInfo?{{classId}}">
+        <image src="{{item}}" class="slide-image image" width="355" height="200" />
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 首页课程跳转按钮 -->
+<view class="group" style="font-size:25rpx;">
+  <view class="groupitem" bindtap="toclass" data-index="0">
+    <image src="../../images/icon_public_class.png" class="icon" />
+    <text>小班课</text>
+  </view>
+  <view class="groupitem" bindtap="toclass" data-index="1">
+    <image src="../../images/icon_small_class.png" class="icon" />
+    <text>公开课</text>
+  </view>
+  <view class="groupitem" bindtap="toclass" data-index="2">
+    <image src="../../images/icon_design_class.png" class="icon" />
+    <text>设计课</text>
+  </view>
+</view>
+
+<view class="container">
+  <view wx:for="{{teacherlist}}"  wx:key="objectId" class="main">
+    <navigator url="../teacher/teacher?relevantTeacherId={{item.relevant_Id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class=" weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{item.image}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{item.teacherName}}</view>
+        <text class="weui-media-box__desc">{{item.experience1}}</text>
+        <text class="weui-media-box__desc">{{item.experience2}}</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+<view class="title" hidden="{{finalLine}}">
+  <text>———————— 我们是有底线的 ————————</text>
+</view>
