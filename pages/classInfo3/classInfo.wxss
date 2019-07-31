@@ -204,7 +204,7 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 10rpx;
-    margin-top: 10rpx;
+    margin-top: 25rpx;
 }
 
 .weui-media-box__desc {
@@ -222,6 +222,7 @@
     width: 100%;
     position: fixed;
     bottom: 0rpx;
+    height: 35px;
     display: flex;
     flex-direction: row;
 }
@@ -234,6 +235,10 @@
     font-size: 30rpx;
 }
 
+.link{
+    color: #24B2F0;
+    text-decoration:underline ;
+}
 
 /* 拼课弹窗按钮 */
 .modal-dialog {

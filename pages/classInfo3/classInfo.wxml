@@ -1,9 +1,9 @@
 <!-- pages/classInfo/classInfo.wxml -->
 <!-- pages/teacher/teacher.wxml -->
-<view class="page">
+<view class="page" style="margin-bottom:40px">
     <!-- 课程图片与截止日期 -->
     <view class="header">
-        <image src="https://static.wixstatic.com/media/a16f48_2bcb8020df194e4d8ec7e17a765b63d1~mv2_d_3532_2505_s_4_2.jpg/v1/fill/w_1163,h_825,al_c,q_85,usm_0.66_1.00_0.01/Shelter%20for%20soul_%ED%8F%AC%EC%8A%A4%ED%84%B0_%EC%B6%9C%EB%A0%A5%EC%9A%A9(A2)_%EC%8B%AC%EC%82%AC%EC%9C%84%EC%9B%90%EC%88%98%EC%A0%95_%EB%8C%80%EC%A7%80%201.webp" class="image" />
+        <image src="{{classInfo.image}}" class="image" />
         <view class="notice">
             <i-icon type="clock" size="20" color="#FFFFFF" class="icon"></i-icon>
             <text class="endtime">拼课报名截止时间：{{classInfo.applyTime}}</text>
@@ -19,9 +19,9 @@
         </view>
         <view class="title" style="margin-top:80rpx;margin-bottom:40rpx">
             <view class="price">原价:{{classInfo.price}}</view>
-            <text class="pinke-price">
+            <view class="pinke-price">
                 拼课价:{{classInfo.price*(100-classInfo.discount)*0.01|int}}
-            </text>
+            </view>
         </view>
         <view class="detail">
             <text class="detail-time">竞赛类型:</text>
@@ -86,50 +86,64 @@
                     <view class="weui-media-box__title weui-media-box__title_in-text" style="border:0;">
                         指导老师
                     </view>
-                    <navigator url="../teacher/teacher?relevantTeacherId={{relevantTeacherId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                        <view class=" weui-media-box__hd_in-appmsg">
-                            <image class="weui-media-box__thumb" src="{{teacherImage}}" />
-                        </view>
-                        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                            <view class="weui-media-box__title">{{teacherName}}</view>
-                            <text class="weui-media-box__desc">{{experience}}</text>
-                        </view>
-                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                    </navigator>
+                    <block wx:for="{{teacherInfo.results}}" wx:key="index">
+                        <navigator url="../teacher/teacher?relevantTeacherId={{teacherInfo.results[index].objectId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                            <view class=" weui-media-box__hd_in-appmsg">
+                                <image class="weui-media-box__thumb" src="{{teacherInfo.results[index].image}}" />
+                            </view>
+                            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                <view class="weui-media-box__title">{{teacherInfo.results[index].name}}</view>
+                                <text class="weui-media-box__desc">{{teacherInfo.results[index].experience}}</text>
+                            </view>
+                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                        </navigator>
+                    </block>
                 </view>
             </view>
-            <!-- 课程目标 -->
-            <view class="weui-media-box weui-media-box_text">
-                <view class="weui-media-box__title weui-media-box__title_in-text">竞赛基本情况</view>
+            <!-- ["bbfb704966","7f7e21f5f6"] -->
+            <!-- 竞赛基本信息 -->
+            <view class="weui-media-box weui-panel_access">
+                <view class="weui-media-box__title weui-media-box__title_in-text">竞赛基本信息</view>
                 <view class="mid-font">主办方</view>
-                <text class="weui-media-box__desc ">{{classInfo.organizer}}</text>
+                <text class="weui-media-box__desc line ">{{classInfo.organizer}}</text>
                 <view class="mid-font">竞赛内容</view>
-                <text class="weui-media-box__desc ">{{classInfo.content}}</text>
+                <text class="weui-media-box__desc line">{{classInfo.content}}</text>
                 <view class="mid-font">参赛资格</view>
-                <view class="weui-media-box__desc ">{{classInfo.qualifications}}</view>
+                <view class="weui-media-box__desc line">{{classInfo.qualifications}}</view>
                 <view class="mid-font">评委</view>
-                <text class="weui-media-box__desc ">{{classInfo.Judge}}</text>
+                <text class="weui-media-box__desc line">{{classInfo.Judge}}</text>
                 <view class="mid-font">时间安排</view>
-                <text class="weui-media-box__desc ">{{classInfo.timeList}}</text>
+                <text class="weui-media-box__desc line">{{classInfo.timeList}}</text>
                 <view class="mid-font">竞赛奖励</view>
-                <text class="weui-media-box__desc ">{{classInfo.reward}}</text>
+                <text class="weui-media-box__desc line">{{classInfo.reward}}</text>
+                <view class="mid-font">作品格式及提交方式</view>
+                <text class="weui-media-box__desc line">详见下方竞赛官方网站</text>
                 <view class="mid-font">竞赛官方网站</view>
-                <view class="weui-media-box__desc ">{{classInfo.link}}</view>
+                <view bindtap='copyText' data-text="{{classInfo.link}}" class="weui-media-box__desc line link">
+                    {{classInfo.link}}
+                </view>
             </view>
-            <!-- 课前要求 -->
+            <!-- 竞赛负责与版权声明 -->
             <view class="weui-media-box weui-media-box_text">
                 <view class="weui-media-box__title weui-media-box__title_in-text">竞赛信息编辑</view>
-                <text class="weui-media-box__desc">{{classInfo.requirement}}</text>
+                <text class="weui-media-box__desc">
+                    文字:{{classInfo.editor[0]}} | 校对:{{classInfo.editor[1]}}
+                </text>
+            </view>
+            <!-- 版权声明 -->
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">版权声明</view>
+                <text class="weui-media-box__desc">{{classInfo.statement}}</text>
             </view>
             <!-- 课程内容 -->
-            <view class="weui-media-box weui-media-box_text">
+            <!-- <view class="weui-media-box weui-media-box_text">
                 <view class="weui-media-box__title weui-media-box__title_in-text">课程内容</view>
                 <view wx:key="index" style="line-height:30rpx;">
                     <block wx:for="{{classInfo.content}}" wx:key="index">
                         <view class="weui-media-box__desc">{{classInfo.content[index]}}</view>
                     </block>
                 </view>
-            </view>
+            </view> -->
         </view>
     </view>
 </view>
@@ -137,7 +151,7 @@
     <view class="btn_view">
         <button class='btn_font'>
             <i-icon type="remind" size="28" color="#80848f"></i-icon>
-            提醒开课
+            拼课提醒
         </button>
     </view>
     <view class="btn_view">
