@@ -4,9 +4,9 @@
     "component-tag-name": "./components/searchbar/searchbar"
   },
   "pages": [
+    "pages/class/class",
     "pages/classInfo3/classInfo",
     "pages/index/index",
-    "pages/class/class",
     "pages/classInfo/classInfo",
     "pages/classInfo2/classInfo",
     "pages/teacher/teacher",
@@ -15,6 +15,7 @@
     "pages/classlist/classlist",
     "pages/search/search"
   ],
+  
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",

@@ -15,23 +15,23 @@ Component({
     
   },
 
-  // ready: function () {
-  //   var info = relevantTeacherId;
-  //   console.log(relevantTeacherId);
-  //   var query = Bmob.Query('Teacher_list');
-  //   query.get(info).then(res => {
-  //     // console.log(res.relevantTeacherId);
-  //     console.log(res);
-  //     this.setData({
-  //       image:res.image,
-  //       Name:res.Name,
-  //       experience:res.experience,
-  //     })
-  //   }).catch(err => {
-  //     console.log(err)
-  //   })
+  ready: function () {
+    var info = this.data.relevantTeacherId;
+    console.log(info);
+    var query = Bmob.Query('Teacher_list');
+    query.get(info).then(res => {
+      // console.log(res.relevantTeacherId);
+      console.log(res);
+      this.setData({
+        image:res.image,
+        Name:res.Name,
+        experience:res.experience,
+      })
+    }).catch(err => {
+      console.log(err)
+    })
     
-  // },
+  },
 
   /**
    * 组件的方法列表
