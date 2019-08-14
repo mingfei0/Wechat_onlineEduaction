@@ -4,14 +4,14 @@
     "component-tag-name": "./components/searchbar/searchbar"
   },
   "pages": [
-    "pages/class/class",
-    "pages/classInfo3/classInfo",
+    "pages/user/user",
     "pages/index/index",
+    "pages/class/class",
     "pages/classInfo/classInfo",
     "pages/classInfo2/classInfo",
+    "pages/classInfo3/classInfo",
     "pages/teacher/teacher",
     "pages/logs/logs",
-    "pages/user/user",
     "pages/classlist/classlist",
     "pages/search/search"
   ],

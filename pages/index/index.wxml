@@ -20,7 +20,7 @@
   </view>
   <view class="groupitem" bindtap="toclass" data-index="2">
     <image src="../../images/icon_design_class.png" class="icon" />
-    <text>设计课</text>
+    <text>竞赛课</text>
   </view>
 </view>
 

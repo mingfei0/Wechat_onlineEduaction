@@ -39,14 +39,16 @@ Page({
     });
 
     var query = Bmob.Query('Class_profiles');
-    query.limit(6);
-    number = number + 6;
+    query.limit(5);
+    number = number + 5;
 
+    //确定课程数据总条数
     query.count().then(res => {
       classNumber = res;
     });
     query.order("-score", "state");
 
+    //获取限制的信息条数
     query.find().then(res => {
       this.setData({
         classlist: res,
@@ -55,22 +57,25 @@ Page({
       console.log(err)
     });
 
-    // var query = Bmob.Query('Class_profiles3');
-    // query.limit(6);
-    // number3 = number3 + 6;
+    var query = Bmob.Query('Class_profiles3');
+    query.limit(5);
+    number3 = number3 + 5;
 
-    // query.count().then(res => {
-    //   classNumber3 = res;
-    // });
-    // query.order("-score", "state");
+    query.count().then(res => {
+      classNumber3 = res;
+      console.log(classNumber3);
+    });
+    query.order("-score", "state");
 
-    // query.find().then(res => {
-    //   this.setData({
-    //     classlist3: res,
-    //   });
-    // }).catch(err => {
-    //   console.log(err)
-    // });
+    query.find().then(res => {
+      console.log(res);
+      this.setData({
+        classlist3: res,
+      });
+    }).catch(err => {
+      console.log(err)
+    });
+
   },
 
   tabClick: function (e) {

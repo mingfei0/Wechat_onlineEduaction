@@ -20,7 +20,9 @@
                 </block>
                 <view class="weui-navbar__slider" style="left: {{sliderLeft}}rpx; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
             </view>
+
             <view class="weui-tab__panel">
+
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
                     <navigator url="../classInfo/classInfo?relevantClassId={{item.relevantClassId}}" wx:for="{{classlist}}" wx:key="objectId" class="main">
                         <view>
@@ -54,10 +56,11 @@
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
 
+
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
 
                     <!-- 还未完成数据链接工作 -->
-                    <navigator url="../classInfo/classInfo?relevantClassId={{item.relevantClassId}}" wx:for="{{classlist}}" wx:key="objectId" class="main">
+                    <navigator url="../classInfo3/classInfo?relevantClassId={{item.relevantClassId}}" wx:for="{{classlist3}}" wx:key="objectId" class="main">
                         <view>
                             <image src="{{item.classImage}}" style="width:100%;height:300rpx;border-top-right-radius: 10px;border-top-left-radius: 10px;" />
                         </view>
